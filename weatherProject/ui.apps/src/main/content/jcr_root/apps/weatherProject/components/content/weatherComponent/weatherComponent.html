@@ -1,0 +1,21 @@
+<!--/*
+Weather Component using Sightly and WCMUse Pojo
+
+*/-->
+<h3>Weather Component</h3>
+<p>This Component will show the Weather for the configured City</p>
+<div data-sly-use.weatherObject="weatherProject.core.WeatherService" data-sly-test="${weatherObject}">
+
+    <h3>Location: ${weatherObject.weatherBean.location}</h3>
+    <h3>Temprature: ${weatherObject.weatherBean.temparature}</h3>
+    
+    <h3>Humidity: ${weatherObject.weatherBean.humidity}</h3>
+    <h3>Description: ${weatherObject.weatherBean.description}</h3>
+    
+    <br/><br/> 
+    <p>Data coming from the Webservice: http://openweathermap.org/data/2.5/weather?q="+City_Name+"&appid=b6907d289e10d714a6e88b30761fae22 </p>
+
+</div>
+
+
+
